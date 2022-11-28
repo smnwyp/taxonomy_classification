@@ -7,7 +7,7 @@ import constants as ct
 
 def setup_args():
     parser = argparse.ArgumentParser(description='get nacecode')
-    parser.add_argument('-i', '--company_ids', default=[""], type=str, nargs='+')
+    parser.add_argument('-i', '--company_ids', type=str, nargs='+')
 
     return parser
 
@@ -48,9 +48,13 @@ def run(query_ids: list[int]):
 
 if __name__ == '__main__':
     parser = setup_args()
-    query_ids: list[str] = parser.parse_args().company_ids
+
+    args = parser.parse_args()
+    query_ids: list[str] = args.company_ids
     if query_ids:
         run(query_ids=query_ids)
+    else:
+        print("no id, no idea!")
 
 
 # async, sinks in between steps
