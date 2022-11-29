@@ -1,6 +1,6 @@
 NACE_URL = "bolt://localhost:7687"
 NACE_USER = "neo4j"
-NACE_PWD = "briink"
+NACE_PWD = "smnwyp"
 
 NACE_COMP_LABEL = "PortfolioCompany"
 NACE_COMP_DSCP = "description"
